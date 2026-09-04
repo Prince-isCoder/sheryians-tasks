@@ -1,0 +1,173 @@
+@font-face {
+    font-family: Reckless;
+    src: url('./fonts/RecklessCondensedS-TRIAL-Book.woff');
+}
+
+@font-face {
+    font-family: Midnight;
+    src: url('./fonts/midnight-sans-rd-12-semibold-trial.otf');
+}
+
+@font-face {
+    font-family: Figtree;
+    src: url('./fonts/figtree_n4.3c0838aba1701047e60be6a99a1b0a40ce9b8419.woff2');
+}
+
+@font-face {
+    font-family: Roboto-regular;
+    src: url('./fonts/RobotoMono-Regular.ttf');
+}
+
+@font-face {
+    font-family: Roboto-medium;
+    src: url('./fonts/RobotoMono-Medium.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+main {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #FBF9EB;
+    background-image: url('https://www.twoleavestea.com/cdn/shop/files/matcha_pour_mobile.webp?v=1785857048&width=720');
+    background-position: 50% -100%;
+    background-size: 150%;
+    background-repeat: no-repeat;
+    padding: 1rem;
+}
+
+nav {
+    width: 100%;
+    background-color: #FFFEFB;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Reckless';
+    padding: 0.3rem 1rem;
+    border-radius: 1rem;
+    border: 1px solid black;
+    position: sticky;
+    z-index: 10;
+    top: 0;
+    left: 0;
+}
+
+nav .nav-part-1 {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.4rem;
+    width: 33%;
+    background-color: blue;
+}
+
+.nav-part-1 h3 {
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    display: none;
+    align-items: center;
+}
+
+nav #menu-icon {
+    font-size: 3rem;
+}
+
+nav .nav-part-2 {
+    width: 33%;
+    margin: 0.2rem;
+    /* background-color: red; */
+}
+
+nav .nav-part-2 img {
+    width: 100%;
+    object-fit: cover;
+    margin: 0.6rem 0rem;
+}
+
+nav .nav-part-3 {
+    display: flex;
+    width: 50%;
+    gap: 1rem;
+    align-items: center;
+    justify-content: end;
+    /* background-color: yellow; */
+}
+
+.nav-part-3 h3 {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-family: Roboto-medium;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.nav-part-3 svg {
+    width: 2rem;
+    height: 2rem;
+}
+
+.nav-part-3 h3 {
+    font-weight: 300;
+}
+
+
+#section-1 {
+    width: 100%;
+    height: 100vh;
+    padding: 0% 0.5rem;
+}
+
+#section-1 .section1-container {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+#section-1 .section1-container .main-heading h1 {
+    font-family: Reckless;
+    font-size: 3.5rem;
+    color: white;
+    font-weight: 100;
+}
+
+.section1-container .sub-heading {
+    width: 85vw;
+}
+
+.section1-container .sub-heading p {
+    font-family: Figtree;
+    color: white;
+    font-size: 1.05rem;
+}
+
+.section1-container .shop-button {
+    width: 100%;
+}
+
+.section1-container .shop-button button {
+    background-color: #2A2857;
+    width: 100%;
+    color: white;
+    border: none;
+    border-radius: 1.5rem;
+    font-size: 1rem;
+    padding: 1rem;
+}
