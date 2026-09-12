@@ -38,11 +38,17 @@ body {
 main {
     position: relative;
     width: 100%;
-    min-height: 100vh;
+    min-height: 100dvh;
+
+    display: flex;
+    flex-direction: column;
+
     background-color: #FBF9EB;
     background-image: url('https://www.twoleavestea.com/cdn/shop/files/matcha_pour_mobile.webp?v=1785857048&width=720');
-    background-position: 50% -100%;
-    background-size: 150%;
+    /* background-position: 50% 100%; */
+    /* background-size: clamp(100%, 170%, 170%); */
+    background-size: cover;
+    background-position: center 70%;
     background-repeat: no-repeat;
     padding: 1rem;
 }
@@ -68,7 +74,6 @@ nav .nav-part-1 {
     gap: 1rem;
     font-size: 1.4rem;
     width: 33%;
-    background-color: blue;
 }
 
 .nav-part-1 h3 {
@@ -90,9 +95,9 @@ nav .nav-part-2 {
 }
 
 nav .nav-part-2 img {
-    width: 100%;
+    width: 25vw;
     object-fit: cover;
-    margin: 0.6rem 0rem;
+
 }
 
 nav .nav-part-3 {
@@ -127,13 +132,17 @@ nav .nav-part-3 {
 
 #section-1 {
     width: 100%;
-    height: 100vh;
-    padding: 0% 0.5rem;
+    min-height: 0;
+    padding: 0 0.5rem;
+    display: flex;
+    flex: 1;
+    align-items: flex-end;
 }
 
 #section-1 .section1-container {
     width: 100%;
-    height: 80%;
+    height: 100%;
+
     display: flex;
     align-items: flex-start;
     flex-direction: column;
@@ -143,7 +152,7 @@ nav .nav-part-3 {
 
 #section-1 .section1-container .main-heading h1 {
     font-family: Reckless;
-    font-size: 3.5rem;
+    /* font-size: clamp(3.5rem, 4vw, 5rem); */
     color: white;
     font-weight: 100;
 }
@@ -155,7 +164,8 @@ nav .nav-part-3 {
 .section1-container .sub-heading p {
     font-family: Figtree;
     color: white;
-    font-size: 1.05rem;
+    /* font-size: clamp(1.05rem, 2vw, 4rem); */
+    font-weight: 500;
 }
 
 .section1-container .shop-button {
@@ -170,4 +180,121 @@ nav .nav-part-3 {
     border-radius: 1.5rem;
     font-size: 1rem;
     padding: 1rem;
+}
+
+
+@media (min-width: 1440px) {
+    nav {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #menu-icon {
+        display: none;
+    }
+
+    .nav-part-1 {
+        width: 33%;
+        display: flex;
+        align-items: center;
+        gap: 1px;
+    }
+
+    .nav-part-1 h3 {
+        display: flex;
+    }
+
+    .nav-part-1 span {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 1.125rem !important;
+        height: 1.125rem;
+        background-color: #c0dbff;
+        border-radius: 50%;
+        border: .0625rem solid currentColor;
+        margin-left: .5rem;
+        aspect-ratio: 1 / 1;
+    }
+
+    .nav-part-2 {
+        width: 33%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        /* background-color: red; */
+    }
+
+    .nav-part-2 img {
+        margin-right: 4vw;
+    }
+
+    .nav-part-3 {
+        /* background-color: yellowgreen; */
+        width: 25%;
+        display: flex;
+        gap: 8rem;
+    }
+
+    .nav-part-3 h3 {
+        display: flex;
+        letter-spacing: 1px;
+        font-size: 0.75rem;
+    }
+
+    nav #menu-icon {
+        font-size: 1.5rem;
+    }
+
+    nav .nav-part-2 img {
+        width: 7vw;
+    }
+
+    .nav-part-3 svg {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    main {
+        background-position: center center;
+        background-size: cover;
+        background-image: url('https://www.twoleavestea.com/cdn/shop/files/matcha_pour.webp?v=1785856852&width=3600.0');
+    }
+
+    #section-1 {
+        width: 100%;
+    }
+
+    .section1-container {
+        width: 50%;
+    }
+
+    .section1-container .main-heading {
+        width: 30%;
+    }
+
+    .main-heading h1 {
+        font-size: 5rem;
+    }
+
+    .section1-container .sub-heading {
+        width: 40%;
+    }
+
+    .sub-heading p {
+        font-size: 1.25rem;
+    }
+
+    .section1-container .shop-button {
+        width: 50%;
+    }
+
+    .section1-container .shop-button button {
+        width: fit-content;
+        padding: 1rem 3rem;
+    }
 }
